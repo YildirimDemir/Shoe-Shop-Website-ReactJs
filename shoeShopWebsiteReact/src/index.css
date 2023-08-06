@@ -76,6 +76,11 @@ nav .nav-logo-resp{
   border-bottom: 3px solid black;
 }
 
+.nav-links ul li a::selection{
+  background: #000;
+  color: #fff;
+}
+
 .search-bar{
   width: 300px;
   height: 40px;
@@ -131,6 +136,11 @@ nav .nav-logo-resp{
   border-bottom: 3px solid black;
 }
 
+.nav-user a::selection{
+  background: #000;
+  color: #fff;
+}
+
 .nav-basket a{
   padding: 8px 15px;
   font-size: 1.4rem;
@@ -139,6 +149,7 @@ nav .nav-logo-resp{
 .nav-basket a:hover{
   border-bottom: 3px solid #000;
 }
+
 
 .hamburger{
   width: 35px;
@@ -183,6 +194,12 @@ footer .footer-row{
   color:#000;
   margin-top: 15px;
   font-family: var(--secondary-font-family);
+}
+
+.footer-col h3::selection,
+.footer-col ul li a::selection{
+  background: #000;
+  color: #fff;
 }
 
 .footer-col ul{
@@ -253,12 +270,22 @@ header .header-content{
   color: #fff;
   font-family: var(--secondary-font-family);
 }
+
+.header-content h1::selection{
+  background: #fff;
+  color: #000;
+}
+
 .header-content p{
   color: #fff;
   font-size: 1.5rem;
   font-family: var(--main-font-family);
 }
 
+.header-content p::selection{
+  background: #fff;
+  color: #000;
+}
 
 /* ===CATEGORY=== */
 
@@ -271,6 +298,11 @@ header .header-content{
   font-size: 2.4rem;
   margin-top: 30px;
   font-family: var(--secondary-font-family);
+}
+
+.category h1::selection{
+  background: #000;
+  color: #fff;
 }
 
 .category-content {
@@ -313,6 +345,11 @@ a{
   text-decoration: none;
 }
 
+.category-box h3::selection{
+  background: #fff;
+  color: #000;
+}
+
 
 /* =====NEWSLATTER===== */
 
@@ -350,6 +387,12 @@ form h3{
   text-align: center;
 }
 
+form h3::selection{
+  background: #fff;
+  color: #000;
+
+}
+
 form input{
   width: 50%;
   height: 40px;
@@ -359,6 +402,11 @@ form input{
   outline: none;
   border: none;
   text-align: center;
+}
+
+form input::selection{
+  background: #000;
+  color: #fff;
 }
 
 form button{
@@ -376,6 +424,11 @@ form button{
 }
 form button:hover{
   background: #dedede;
+}
+
+form button::selection{
+  background: #000;
+  color: #fff;
 }
 
 .joined-to-newslatter{
