@@ -551,6 +551,74 @@ form button::selection{
   font-size: 1rem;
 }
 
+/* =====RELEATED QUESTIONS====== */
+
+.questions-content{
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 10px;
+}
+
+.questions-content .question{
+  width: 50%;
+  min-height: 7vh;
+  margin: 10px auto;
+  padding-top: 10px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  outline: none;
+  position: relative;
+}
+
+.question .question-number{
+  font-family: var(--secondary-font-family);
+  position: absolute;
+  left: 10px;
+  font-size: 1rem;
+  transform: translateY(6px);
+}
+
+.question .question-icon{
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-family: var(--secondary-font-family);
+  font-size: 1.5rem;
+}
+
+.question .question-title{
+  text-align: center;
+  font-family: var(--secondary-font-family);
+}
+
+.question .question-text{
+  font-size: 1.2rem;
+  padding: 20px 10px;
+  text-align: center;
+  font-family: var(--main-font-family);
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+}
+
+.question-open{
+ background: #dedede;
+}
+
+.question-open .question-text{
+  background: #fff;
+  border-radius: 0px 0px 10px 10px;
+  margin-top: 10px;
+}
+
 
 
 
