@@ -579,7 +579,7 @@ form button::selection{
   position: absolute;
   left: 10px;
   font-size: 1rem;
-  transform: translateY(6px);
+  transform: translateY(3px);
 }
 
 .question .question-icon{
@@ -588,11 +588,14 @@ form button::selection{
   cursor: pointer;
   font-family: var(--secondary-font-family);
   font-size: 1.5rem;
+  transform: translateY(-3px);
 }
 
 .question .question-title{
   text-align: center;
   font-family: var(--secondary-font-family);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
 }
 
 .question .question-text{
@@ -753,6 +756,17 @@ form button::selection{
 
 .about-us-content .about-us-text{
   font-size: .75rem;
+}
+
+.questions-content .question{
+  width: 80%;
+}
+
+.question .question-text{
+  font-size: .9rem;
+}
+.question .question-title{
+  font-size: 1.2rem;
 }
 
 }
