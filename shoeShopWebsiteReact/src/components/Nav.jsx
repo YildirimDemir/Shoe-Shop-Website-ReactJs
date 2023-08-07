@@ -55,7 +55,7 @@ function NavContent({isNavOpen}){
                         <Link to="/products">Products</Link>
                     </li>
                     <li>
-                        <Link to="/products">Contact</Link>
+                        <Link to="/contact">Contact</Link>
                     </li>
                     <li>
                         <Link to="/about">About</Link>
