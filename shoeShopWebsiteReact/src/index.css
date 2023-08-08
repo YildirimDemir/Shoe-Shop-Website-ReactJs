@@ -161,9 +161,17 @@ nav .nav-logo-resp{
   cursor: pointer;
   z-index: 1000;
 }
-.hamburger img{
+.hamburger span{
   width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-family: var(--main-font-family);
 }
+
 
 
 /* ====FOOTER==== */
@@ -604,7 +612,7 @@ form button::selection{
   padding: 20px 10px;
   text-align: center;
   font-family: var(--main-font-family);
-  min-height: 30vh;
+  height: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -621,10 +629,90 @@ form button::selection{
   background: #fff;
   border-radius: 0px 0px 10px 10px;
   margin-top: 10px;
+  min-height: 30vh; 
+  transition: max-height 0.5s ease-in-out; 
 }
 
 
 
+.sign{
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sign .sign-form{
+  width: 50%;
+  height: 60vh;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  border: 15px double #dedede;
+  outline: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sign-form form{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  width: 100%;
+  height: 100%;
+}
+
+.sign-form form h1{
+  font-family: var(--secondary-font-family);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.sign-form form input{
+  width: 80%;
+  height: 40px;
+  margin: 10px auto 10px auto;
+  background: #dedede;
+  font-size: 1rem;
+  font-family: var(--main-font-family);
+}
+
+.sign-form form button{
+  width: 60%;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  font-family: var(--main-font-family);
+  font-size: 1rem;
+}
+
+.sign-form form button:hover{
+  background: #333;
+}
+
+.sign-form form .user-link{
+  width: 80%;
+  text-align: center;
+  font-size: .95rem;
+  font-family: var(--main-font-family);
+}
+
+.user-link a{
+  color: #333;
+}
+
+.user-link span{
+  margin: 5px;
+}
 
 /* ===RESPONSIVE=== */
 
@@ -765,9 +853,33 @@ form button::selection{
 
 .question .question-text{
   font-size: .9rem;
+  overflow-y: scroll;
 }
+
 .question .question-title{
   font-size: 1.2rem;
+}
+
+.sign .sign-form{
+  width: 80%;
+}
+.sign-form form h1{
+  font-size: 1.8rem;
+}
+
+.sign-form form input{
+  font-size: .75rem;
+}
+
+.sign-form form button{
+  font-size: .8rem;
+}
+
+.sign-form form .user-link{
+  font-size: .7rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
 }
 
 }
@@ -802,4 +914,10 @@ form h3{
 .welcome-newslatter p{
   font-size: .8rem;
 }
+}
+
+@media (max-width: 425px){
+  .nav-content{
+    width: 100%;
+  }
 }

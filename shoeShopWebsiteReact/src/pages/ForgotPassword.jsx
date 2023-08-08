@@ -2,57 +2,45 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 export default function SignIn(){
-    const signInBg = "/src/img/sign-in.jpeg"
+    const forgotPasswordBg = "/src/img/sign-in.jpeg"
 
     return(
-        <div className="sign" style={{backgroundImage: `url(${signInBg})`}}>
-            <SignInForm />
+        <div className="sign" style={{backgroundImage: `url(${forgotPasswordBg})`}}>
+            <ForgotPassword />
         </div>
     )
 }
 
-function SignInForm(){
+function ForgotPassword(){
 
     const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-
 
     function handleSignInForm(e) {
         e.preventDefault();
 
-        if(!email || !password) return
+        if(!email) return
 
-        const user  = {email: email, password: password}
+        const forgotPass = {email: email}
 
-        console.log(user)
+        console.log(forgotPass)
 
         setEmail("")
-        setPassword("")
         
     }
 
     return(
         <div className="sign-form"> 
             <form onSubmit={handleSignInForm}>
-                <h1>Sign In</h1>
+                <h1>Forgot Password</h1>
                 <input
                      type="email"
                      placeholder='Enter your email'
                      value={email}
                      onChange={(e) => setEmail(e.target.value)}
                      />
-                 <input
-                     type="password"
-                     placeholder='Enter Password'
-                     value={password}
-                     onChange={(e) => setPassword(e.target.value)}
-                     />
                     <div className="user-link">
                     <span>
                         <Link to="/sign-up">Create an Account</Link>
-                    </span>
-                    <span>
-                        <Link to="/forgot-password">Forgot Password</Link>
                     </span>
                     </div> 
 

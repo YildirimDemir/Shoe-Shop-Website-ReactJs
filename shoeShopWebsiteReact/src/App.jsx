@@ -8,6 +8,7 @@ import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Basket from './pages/Basket'
 import Questions from './pages/ReleatedQuestions'
+import ForgotPassword from './pages/ForgotPassword'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 
@@ -26,6 +27,7 @@ export default function App(){
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/basket' element={<Basket />} />
         <Route path='/questions' element={<Questions />} />
+        <Route path='/forgot-password' element={<ForgotPassword />} />
       </Routes>
       <Footer />
       </BrowserRouter>

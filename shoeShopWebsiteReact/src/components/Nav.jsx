@@ -23,7 +23,7 @@ export default function Nav() {
     return (
         <nav>
             <NavLogo />
-            <Hamburger onClick={toggleNav}/>
+            <Hamburger onClick={toggleNav} isNavOpen={isNavOpen}/>
             <NavContent isNavOpen={isNavOpen}/>
         </nav>
     );
@@ -91,10 +91,12 @@ function Basket(){
     )
 }
 
-function Hamburger({onClick}) {
+function Hamburger({onClick, isNavOpen}) {
     return (
         <div className='hamburger' onClick={onClick}>
-            <img src="src/img/menu-icon-removebg-preview.png" alt="Menu" />
+            <span>
+             {isNavOpen === "-100%" ? "≡" : "x"}
+            </span>
         </div>
     );
 }
