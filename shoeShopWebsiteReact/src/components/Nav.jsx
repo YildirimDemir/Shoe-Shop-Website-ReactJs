@@ -24,7 +24,7 @@ export default function Nav() {
         <nav>
             <NavLogo />
             <Hamburger onClick={toggleNav} isNavOpen={isNavOpen}/>
-            <NavContent isNavOpen={isNavOpen}/>
+            <NavContent isNavOpen={isNavOpen} onClick={toggleNav}/>
         </nav>
     );
 }
@@ -39,7 +39,7 @@ function NavLogo(){
     )
 }
 
-function NavContent({isNavOpen}){
+function NavContent({isNavOpen, onClick}){
     return(
         <div className="nav-content" style={{right: isNavOpen}}>
             <div className="nav-logo-resp">
@@ -50,16 +50,16 @@ function NavContent({isNavOpen}){
             <div className="nav-links">
                 <ul>
                     <li>
-                        <Link to="/home">Home</Link>
+                        <Link to="/home" onClick={onClick}>Home</Link>
                     </li>
                     <li>
-                        <Link to="/products">Products</Link>
+                        <Link to="/products" onClick={onClick}>Products</Link>
                     </li>
                     <li>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/contact" onClick={onClick}>Contact</Link>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
+                        <Link to="/about" onClick={onClick}>About</Link>
                     </li>
                 </ul>
             </div>
@@ -71,20 +71,20 @@ function NavContent({isNavOpen}){
                 <button>Search</button>
             </div>
 
-            <Basket />
+            <Basket onCLick={onClick} />
 
             <div className="nav-user">
-                <Link to="/sign-in">Sign In</Link>
-                <Link to="/sign-up">Sign Up</Link>
+                <Link to="/sign-in" onClick={onClick}>Sign In</Link>
+                <Link to="/sign-up" onClick={onClick}>Sign Up</Link>
             </div>
             </div>
     )
 }
 
-function Basket(){
+function Basket({onCLick}){
     return(
         <div className="nav-basket">
-        <Link to="/basket">
+        <Link to="/basket" onClick={onCLick}>
             <FontAwesomeIcon icon={faBasketShopping}  style={{color: "000"}}/>
         </Link>
         </div>
