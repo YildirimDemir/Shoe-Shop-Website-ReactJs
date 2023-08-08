@@ -714,6 +714,59 @@ form button::selection{
   margin: 5px;
 }
 
+
+/* ===AFTER SIGN UP WELCOME CARD TO NEW USER=== */
+
+.welcome-newuser{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.welcome-newuser .welcome-newuser-card{
+  width: 50vh;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 15px double #dedede;
+  background: #fff;
+  border-radius: 10px;
+}
+.welcome-newuser-card h1{
+  font-family: var(--secondary-font-family);
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.welcome-newuser-card button{
+  width: 150px;
+  font-size: 1rem;
+  text-align: center;
+  height: auto;
+  padding: 8px 15px;
+  background: #000;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-top: 15px;
+}
+
+.welcome-newuser-card button a{
+  color: #fff;
+  font-family: var(--main-font-family);
+  text-decoration: none;
+}
+
+
+
+
 /* ===RESPONSIVE=== */
 
 @media (max-width:1024px){

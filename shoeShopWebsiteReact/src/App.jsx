@@ -9,6 +9,7 @@ import SignUp from './pages/SignUp'
 import Basket from './pages/Basket'
 import Questions from './pages/ReleatedQuestions'
 import ForgotPassword from './pages/ForgotPassword'
+import UserMenu from './pages/UserMenu'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 
@@ -28,6 +29,7 @@ export default function App(){
         <Route path='/basket' element={<Basket />} />
         <Route path='/questions' element={<Questions />} />
         <Route path='/forgot-password' element={<ForgotPassword />} />
+        <Route path='/user-menu' element={<UserMenu />} />
       </Routes>
       <Footer />
       </BrowserRouter>

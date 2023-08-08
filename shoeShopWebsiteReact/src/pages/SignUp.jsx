@@ -18,6 +18,8 @@ function SignUpForm(){
     const [newEmail, setNewEmail] = useState("")
     const [newPhoneNumber, setNewPhoneNumber] = useState("")
     const [newPassword, setNewPassword] = useState("")
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+    const [submittedUsername, setSubmittedUsername] = useState("");
 
 
     function handleSignUpForm(e) {
@@ -29,6 +31,8 @@ function SignUpForm(){
 
         console.log(newUser)
 
+        setSubmittedUsername(newUsername)
+        setIsFormSubmitted(true)
         setNewUsername("")
         setNewEmail("")
         setNewPhoneNumber("")
@@ -36,6 +40,7 @@ function SignUpForm(){
     }
 
     return(
+        <>
         <div className="sign-form"> 
             <form onSubmit={handleSignUpForm}>
                 <h1>Sign Up</h1>
@@ -72,6 +77,22 @@ function SignUpForm(){
 
                   <button>Join Us</button>   
             </form>
+        </div>
+        {isFormSubmitted && <WelcomeUser user={submittedUsername} />}
+        </>
+    )
+}
+
+
+function WelcomeUser({user}){
+    return(
+        <div className="welcome-newuser">
+            <div className="welcome-newuser-card">
+                <h1>Welcome {user}</h1>
+                <button>
+                    <Link to="/user-menu">Continue</Link>
+                </button>
+            </div>
         </div>
     )
 }
