@@ -766,12 +766,12 @@ form button::selection{
 
 .user-menu{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .user-menu .user-menu-left{
   width: 30%;
-  height: 100%;
+  height: calc(100% - 70px);
   bottom: 0;
   left: 0;
   position: absolute;
@@ -780,6 +780,8 @@ form button::selection{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 0rem 50% 50% 0rem;
+  border-right: 4px solid #55555571;
 }
 
 .user-menu-left .user-info{
@@ -922,6 +924,45 @@ form button::selection{
   align-items: center;
 }
 
+.user-menu .user-menu-right{
+  width: 70%;
+  min-height: calc(100vh - 70px);
+  bottom: 0;
+  right: 0;
+  float: right;
+  margin-top: 70px;
+  top: 70px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-menu-right .user-menu-options{
+  width: 90%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-menu-options .user-menu-option{
+  width: 220px;
+  height: 220px;
+  border-radius: 1rem;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;font-family: var(--secondary-font-family);
+  border: 15px double #fff;
+  box-shadow: rgba(60, 64, 67, 0.375) 0px 2px 3px 0px, rgba(60, 64, 67, 0.349) 0px 2px 4px 1px;
+}
 
 /* ===RESPONSIVE=== */
 
@@ -1014,6 +1055,63 @@ form button::selection{
   .office-detail p{
     font-size: .8rem;
   }
+
+  .user-menu .user-menu-left{
+    border-radius: 0;
+    border-top: none;
+    border-bottom: none;
+  }
+  .user-info .user-image{
+    width: 160px;
+    height: 160px;
+    border: 12px double #dedede;
+    font-size: 4rem;
+  }
+  
+  .user-info .user-info-details{
+    width: 90%;
+  }
+  
+  .user-info-details .user-info-detail{
+    height: 30px;
+  }
+  
+  
+  .user-info-detail button{
+    font-size: .7rem;
+  }
+  
+  .user-info-details .user-details-save-btn{
+    width: 120px;
+    height: 30px;
+   font-size: 1.8rem;
+  }
+  
+  .user-info .user-menu-logout{
+    width: 110px;
+    height: 30px;
+  }
+  
+  .user-info .user-menu-logout a{
+    font-size: .65rem;
+  }
+
+  .user-menu-options .user-menu-option{
+    width: 190px;
+    height: 190px;
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  .user-info-detail input:disabled{
+    border: none;
+    background: #f4f4f4;
+  }
+
+  .user-info-detail button {
+    padding-top: 1.8px;
+}
+  
 }
 
 @media (max-width:768px){
@@ -1091,6 +1189,26 @@ form button::selection{
   flex-direction: column;
 }
 
+.user-menu .user-menu-left{
+  width: 100%;
+  position: relative;
+  top: 70px;
+  border: 2px solid #444;
+  border-left: none;
+}
+.user-menu .user-menu-right {
+  width: 100%;
+  min-height: 60vh;
+  position: relative;
+  top: 0;
+}
+
+.user-menu-right .user-menu-options {
+  width: 90%;
+  min-height: 70vh;
+
+}
+
 }
 
 @media(max-width:576px){
@@ -1122,6 +1240,18 @@ form h3{
 }
 .welcome-newslatter p{
   font-size: .8rem;
+}
+.user-info .user-menu-logout {
+  width: 110px;
+  height: 30px;
+  position: inherit;
+  margin-bottom: 10px;
+}
+.user-menu-options .user-menu-option{
+  width: 160px;
+  height: 160px;
+  font-size: 1rem;
+  padding: 5px;
 }
 }
 
